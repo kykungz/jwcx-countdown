@@ -10,5 +10,4 @@
 
 ## Instructions
 - กดที่สัญลักษณ์ <img height="60" src="./assets/img/setting.png"> เพื่อเปิด Menu
-
 - กด Spacebar เพื่อ Pause / Resume (Shortcut)
