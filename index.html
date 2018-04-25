@@ -1,0 +1,78 @@
+<!-- เขียนด้วยความเร่งรีบ โค้ดไม่สวยโปรดอภัย -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Junior Webmaster Camp X Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png"  href="assets/img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="assets/css/style.css"></link>
+    <link rel="stylesheet" href="assets/css/jackystyle.css"></link>
+  </head>
+  <body>
+  <div id="clock" class="text-center">
+    <div v-show="showing" class="setting text-white">
+      <button @click="toggleSetting()" class="btn btn-danger close-btn">&times;</button>
+      <span class="clock-set">
+        <input class="clock-input" placeholder="hr" id="hour" type="number" min="0"> :
+        <input class="clock-input" placeholder="min" id="min" type="number" min="0" max="60"> :
+        <input class="clock-input" placeholder="sec" id="sec" type="number" min="0" max="60">
+      </span>
+      <span class="option">
+        <button style="cursor: pointer" class="clock-control btn btn-danger" @click="startStop()">
+          {{ startStopState }}
+        </button>
+        <button :disabled="status === 'stop'" style="cursor: pointer"
+          :class="['clock-control', 'btn', status === 'stop' ? 'btn-muted' : 'btn-warning']"
+          @click="pauseResume()">
+          {{ pauseResumeState }}
+        </button>
+      </span>
+    </div>
+    <img v-show="!showing" @click="toggleSetting()" width="200" class="floating-logo" src="./assets/img/logo.svg" alt="">
+    <h3 class="text-white">Junior Webmaster Camp</h3>
+    <h5 style="color: rgb(254,201,124)">"Next step Web Thai"</h5>
+
+    <h1 class="time pt-3 pb-1 mt-4 text-white">{{ timeLeft }}</h1>
+  </div>
+
+  <div class="particle-backdrop" id="particles-js"></div>
+
+  <div class="cloud-zone">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+    <div class="cloud cloud-5"></div>
+    <div class="cloud cloud-6"></div>
+  </div>
+
+  <div class="cloud-zone2">
+    <div class="cloud2 cloud-1"></div>
+    <div class="cloud2 cloud-2"></div>
+    <div class="cloud2 cloud-3"></div>
+    <div class="cloud2 cloud-4"></div>
+    <div class="cloud2 cloud-5"></div>
+    <div class="cloud2 cloud-6"></div>
+  </div>
+
+  <div class="bottom">
+    <div class="temple-wrapper">
+      <img src="assets/img/mountain.svg" class="mountain1"></img>
+      <img src="assets/img/mountain.svg" class="mountain2"></img>
+      <img src="assets/img/temple.svg" class="temple"></img>
+      <img src="assets/img/heros.svg" class="heros"></img>
+    </div>
+  </div>
+
+  <div class="solid-cloud"></div>
+
+  <script src="assets/js/vue.min.js" type="text/javascript"></script>
+  <script src="assets/js/particle.js" type="text/javascript"></script>
+  <script src="assets/js/script.js" type="text/javascript"></script>
+  <script src="assets/js/clock.js" type="text/javascript"></script>
+
+  </body>
+</html>

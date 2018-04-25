@@ -1,0 +1,111 @@
+.floating-logo {
+  margin: -20px;
+  margin-bottom: -30px;
+  cursor: pointer;
+  animation: floating 2s ease-in-out infinite;
+  transition: all 300ms;
+}
+
+.floating-logo:hover {
+  filter: brightness(0.8);
+  /* animation: spin .5s linear infinite; */
+}
+
+.solid-cloud {
+  background: url(../img/cloud2.svg) no-repeat center;
+  background-size: auto 100%;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100vw;
+  height: 70vh;
+  z-index: -40;
+}
+
+.bottom {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.temple-wrapper {
+  min-height: 500px;
+  width: 100vw;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.temple {
+  position: absolute;
+  bottom: 100px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.heros {
+  position: absolute;
+  bottom: 80px;
+  max-width: 1000px;
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.mountain1 {
+  position: absolute;
+  bottom: -40px;
+  left: -100px;
+  max-width: 500px;
+  width: 100%;
+  z-index: -50;
+}
+
+.mountain2 {
+  position: absolute;
+  bottom: 0;
+  right: -120px;
+  max-width: 400px;
+  width: 100%;
+  z-index: -50;
+}
+
+.setting {
+  height: 130px;
+  margin-bottom: 20px;
+  padding: 26px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+}
+
+.clock-input {
+  width: 5rem;
+  height: 4rem;
+}
+
+.clock-control {
+  font-family:"RSU",sans-serif;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.time {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes floating {
+	0%, 100% { transform: translatey(0px); }
+	50% { transform: translatey(-5px); }
+}
