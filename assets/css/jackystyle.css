@@ -1,3 +1,7 @@
+.text-pause {
+  color:rgb(129, 129, 129);
+}
+
 .floating-logo {
   margin: -20px;
   margin-bottom: -30px;
@@ -20,6 +24,7 @@
   width: 100vw;
   height: 70vh;
   z-index: -40;
+  animation: cloud 10s ease-in-out infinite;
 }
 
 .bottom {
@@ -51,6 +56,7 @@
   width: 100%;
   padding-left: 60px;
   padding-right: 60px;
+  animation: spinning 2s ease-in-out infinite;
 }
 
 .mountain1 {
@@ -100,12 +106,21 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes spinning {
+  0, 100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(2px);
+  }
 }
 
 @keyframes floating {
 	0%, 100% { transform: translatey(0px); }
 	50% { transform: translatey(-5px); }
+}
+
+@keyframes cloud {
+	0%, 100% { transform: translatey(0px); }
+	50% { transform: translatey(-10px); }
 }

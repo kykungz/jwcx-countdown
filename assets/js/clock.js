@@ -7,7 +7,6 @@ new Vue({
   data () {
     return {
       // timer
-      fullDistance: 30 * SECOND,
       distance: 0,
       status: 'stop',
       last: new Date().getTime(),
@@ -20,7 +19,16 @@ new Vue({
       const s = parseInt((this.distance / 1000) % 60)
       const m = parseInt(((this.distance / (1000 * 60)) % 60))
       const h = parseInt(((this.distance / (1000 * 60 * 60)) % 24))
-      return `${h} Hour ${m} Minute ${s} Second`
+      if (s+m+h <= 0) {
+        return `Time's Up!!`
+      } else if (h > 0) {
+        console.log(h)
+        return `${h} Hour ${m} Minute ${s} Second`
+      } else if (m > 0) {
+        return `${m} Minute ${s} Second`
+      } else {
+        return `${s} Second`
+      }
     },
     startStopState () {
       switch (this.status) {
@@ -97,7 +105,6 @@ new Vue({
     load () {
       this.last = localStorage.getItem('last')
       this.status = localStorage.getItem('status') || 'stop'
-      this.fullDistance = localStorage.getItem('fullDistance')
 
       if (this.status === 'running') {
         // calculate elapsed time when window closed
@@ -112,7 +119,6 @@ new Vue({
       localStorage.setItem('distance', this.distance)
       localStorage.setItem('last', new Date().getTime())
       localStorage.setItem('status', this.status)
-      localStorage.setItem('fullDistance', this.fullDistance)
     },
     pauseResume () {
       if (this.status === 'pause') {

@@ -35,7 +35,9 @@
     <h3 class="text-white">Junior Webmaster Camp</h3>
     <h5 style="color: rgb(254,201,124)">"Next step Web Thai"</h5>
 
-    <h1 class="time pt-3 pb-1 mt-4 text-white">{{ timeLeft }}</h1>
+    <h1 :class="['time', 'pt-3', 'pb-1', 'mt-4', status === 'pause' ? 'text-pause' : 'text-white']">
+      {{ timeLeft }}
+    </h1>
   </div>
 
   <div class="particle-backdrop" id="particles-js"></div>
