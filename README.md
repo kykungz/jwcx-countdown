@@ -4,6 +4,7 @@
 ## Features
 - Start / Stop
 - Pause / Resume
+- Panic Mode ตอนเวลาน้อยกว่า 30 วินาที
 - ปิด Tab แล้วเปิดใหม่ เวลาก็ยังเดินอยู่
 - No server-side
 - Work 100% offline (clone first)
