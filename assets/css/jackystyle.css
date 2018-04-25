@@ -12,7 +12,6 @@
 
 .floating-logo:hover {
   filter: brightness(0.8);
-  /* animation: spin .5s linear infinite; */
 }
 
 .solid-cloud {
@@ -24,7 +23,6 @@
   width: 100vw;
   height: 70vh;
   z-index: -40;
-  animation: cloud 10s ease-in-out infinite;
 }
 
 .bottom {
@@ -56,7 +54,6 @@
   width: 100%;
   padding-left: 60px;
   padding-right: 60px;
-  animation: spinning 2s ease-in-out infinite;
 }
 
 .mountain1 {
@@ -106,21 +103,46 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
-@keyframes spinning {
-  0, 100% {
-    transform: translatey(0);
-  }
-  50% {
-    transform: translatey(2px);
-  }
+.panic {
+  animation: panic 200ms ease-in-out infinite;
+}
+
+.shaking {
+  animation: shaking 200ms ease-in-out infinite;
+}
+
+.pulsing {
+  animation: pulsing 300ms ease-in-out infinite;
 }
 
 @keyframes floating {
-	0%, 100% { transform: translatey(0px); }
-	50% { transform: translatey(-5px); }
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-5px); }
 }
 
-@keyframes cloud {
-	0%, 100% { transform: translatey(0px); }
-	50% { transform: translatey(-10px); }
+@keyframes shaking {
+  0, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes panic {
+  0, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes pulsing {
+  0, 100% {
+    color: white;
+  }
+  50% {
+    color: rgb(220, 53, 69);
+  }
 }

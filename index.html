@@ -35,9 +35,20 @@
     <h3 class="text-white">Junior Webmaster Camp</h3>
     <h5 style="color: rgb(254,201,124)">"Next step Web Thai"</h5>
 
-    <h1 :class="['time', 'pt-3', 'pb-1', 'mt-4', status === 'pause' ? 'text-pause' : 'text-white']">
+    <h1 :class="['time', 'pt-3', 'pb-1', 'mt-4',
+      status === 'pause' ? 'text-pause' : 'text-white', {'pulsing': isPanicTime}]">
       {{ timeLeft }}
     </h1>
+    <div class="bottom">
+      <div class="temple-wrapper">
+        <img src="assets/img/mountain.svg" class="mountain1"></img>
+        <img src="assets/img/mountain.svg" class="mountain2"></img>
+        <img src="assets/img/temple.svg"
+          :class="['temple', {'shaking': isPanicTime}]"></img>
+        <img src="assets/img/heros.svg"
+          :class="['heros', {'panic': isPanicTime}]"></img>
+      </div>
+    </div>
   </div>
 
   <div class="particle-backdrop" id="particles-js"></div>
@@ -60,14 +71,7 @@
     <div class="cloud2 cloud-6"></div>
   </div>
 
-  <div class="bottom">
-    <div class="temple-wrapper">
-      <img src="assets/img/mountain.svg" class="mountain1"></img>
-      <img src="assets/img/mountain.svg" class="mountain2"></img>
-      <img src="assets/img/temple.svg" class="temple"></img>
-      <img src="assets/img/heros.svg" class="heros"></img>
-    </div>
-  </div>
+
 
   <div class="solid-cloud"></div>
 

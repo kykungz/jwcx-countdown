@@ -15,11 +15,14 @@ new Vue({
     }
   },
   computed: {
+    isPanicTime () {
+      return this.distance < 30 * SECOND && this.status === 'running'
+    },
     timeLeft () {
       const s = parseInt((this.distance / 1000) % 60)
       const m = parseInt(((this.distance / (1000 * 60)) % 60))
       const h = parseInt(((this.distance / (1000 * 60 * 60)) % 24))
-      if (s+m+h <= 0) {
+      if (this.distance <= 0) {
         return `Time's Up!!`
       } else if (h > 0) {
         console.log(h)
