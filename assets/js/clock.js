@@ -41,11 +41,12 @@ new Vue({
     this.load()
     this.resumeOperation()
     window.addEventListener('keypress', e => {
+      console.log(e)
       switch (e.key) {
         case 'z': case 'ผ': // start / stop
           this.startStop()
           break
-        case 'x': case 'ป': // pause / resume
+        case ' ': // spacebar for pause / resume
           this.pauseResume()
           break
       }
