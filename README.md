@@ -1,5 +1,10 @@
-# JWCx Countdown Timer
-เขียนด้วยความเร็วแสง ไม่ได้ clean code
+<center>
+  <h1>JWCx Countdown Timer</h1>
+
+  <p>Countdown Timer for Junior Webmaster Camp X</p>
+
+  <p>https://kykungz.github.io/jwcx-countdown</p>
+</center>
 
 ## Features
 - Start / Stop
