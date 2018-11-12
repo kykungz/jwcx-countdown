@@ -1,10 +1,8 @@
-<center>
-  <h1>JWCx Countdown Timer</h1>
+<h1 align="center">JWCx Countdown Timer</h1>
 
-  <p>Countdown Timer for Junior Webmaster Camp X</p>
+<p align="center">Countdown Timer for Junior Webmaster Camp X</p>
 
-  <p>https://kykungz.github.io/jwcx-countdown</p>
-</center>
+<p align="center">https://kykungz.github.io/jwcx-countdown</p>
 
 ## Features
 - Start / Stop
